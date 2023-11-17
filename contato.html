@@ -23,6 +23,22 @@
               }, false);
             })();
         </script>
+        <style>
+            @keyframes fadeInFromLeft {
+              0% {
+                opacity: 0;
+                transform: translateY(20%);
+              }
+              100% {
+                opacity: 1;
+                transform: translateX(0);
+              }
+            }
+        
+            .animated-text {
+              animation: fadeInFromLeft 1s ease-out;
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -43,7 +59,7 @@
               </div>
             </div>
         </nav>
-        <h1 class="text-center mb-5 pt-5">Entre em contato conosco!</h1>
+        <h1 class="text-center mb-5 pt-5 animated-text">Entre em contato conosco!</h1>
         <div align="middle">
         <form class="needs-validation container" novalidate>
             <div class="row">
@@ -94,7 +110,7 @@
                 </div>
             </div>
             <div id="text-input" class="mb-3">
-                <textarea class="form-control" id="text-email" rows="5" required></textarea>
+                <textarea class="form-control" aria-label="Caixa de texto" id="text-email" rows="5" required></textarea>
                 <div class="invalid-feedback text-start">
                     Campo obrigatório!
                 </div>
